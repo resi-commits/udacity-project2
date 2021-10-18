@@ -76,11 +76,14 @@ const navBar = (items) => {
 // Scroll to anchor ID using scrollTO event
 // this part was reused (Link: https://webdesign.tutsplus.com/tutorials/smooth-scrolling-vanilla-javascript--cms-35165) and changed to my needs
 const scrollToSection = (event) => {
+  // see documentation: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+  // without preventDefault() the click handling will not be executed
   event.preventDefault();
-  const href = event.target.getAttribute("href");
-  const offsetTop = document.querySelector(href).offsetTop;
+  // get href and set offsetTop
+  const sectionHref = event.target.getAttribute("href");
+  const sectionOffset = document.querySelector(sectionHref).offsetTop;
   scrollTo({
-    top: offsetTop,
+    top: sectionOffset,
     behavior: "smooth"
   });
 }
