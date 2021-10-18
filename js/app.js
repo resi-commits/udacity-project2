@@ -1,24 +1,4 @@
 /**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
-
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
-
-/**
  * Define Global Variables
  * 
 */
@@ -54,16 +34,18 @@ const removeStyles = (item) => {
   navClass.classList.remove('activeNavBar')
 }
 
-// to check if section is near to viewport
+// check for current viewport to adapt styling
+// this section was reused from this knowledge post: https://knowledge.udacity.com/questions/85408
+// adjusted the values of of the box 
 const changeToActive = (items) => {
   for (const item of items) {
     const box = item.getBoundingClientRect();
     // played with the values of top and bottom and experienced the best result with the value of 250 
     if (box.top <= 250 && box.bottom >= 250) {
-      // Apply active state on the current item and the corresponding Nav link.
+      // addStyles method to apply specific styling for active section & navbar
       addStyles(item);
     } else {
-      // Remove active state from other item and corresponding Nav link.
+      // removeStyles method to remove specific styling for active section & navbar
       removeStyles(item);
     }
   }
