@@ -74,6 +74,7 @@ const navBar = (items) => {
 }
 
 // Scroll to anchor ID using scrollTO event
+// this part was reused (Link: https://webdesign.tutsplus.com/tutorials/smooth-scrolling-vanilla-javascript--cms-35165) and changed to my needs
 const scrollToSection = (event) => {
   event.preventDefault();
   const href = event.target.getAttribute("href");
