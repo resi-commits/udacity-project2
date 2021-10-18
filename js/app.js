@@ -28,6 +28,8 @@ const sections = document.querySelectorAll('section');
 // to create an unordered list of elements
 // use the #navbar__list id as it is already available in the HTML
 const navList = document.querySelector('#navbar__list');
+// add button
+const scrollToTopButton = document.querySelector('#scrollToTop')
 // using a document fragment improves the performance as reflow and repaint is only started once
 const navListFragment = document.createDocumentFragment();
 
@@ -100,6 +102,14 @@ const scrollToSection = (event) => {
   });
 }
 
+// Scroll to top if user clicks on button "Scroll to top"
+const scrollToTop = () => {
+  scrollTo({
+    top: top,
+    behavior: "smooth"
+  });
+}
+
 /**
  * End Main Functions
  * Begin Events
@@ -121,3 +131,7 @@ document.addEventListener("scroll", function() {
   changeToActive(sections);
 });
 
+// Scroll to top on button click
+scrollToTopButton.addEventListener('click', function() {
+  scrollToTop();
+});
