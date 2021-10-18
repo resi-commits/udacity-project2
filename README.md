@@ -1,13 +1,14 @@
 # Landing Page Project
+## Table of Content
+* [Content](#content)
+* [Files](#files)
+## Content
 
-## Table of Contents
+The project displays a Landing Page which Navigation bar is dynamically generated. 
+By selecting one navigation item, it is scrolled to the selected section of the page.
+At the bottom of the page you will find a "scroll to top" button.
 
-* [Instructions](#instructions)
-
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Files
+* `index.html`: basic html file including header (without the navigation bar, because it gets dynamically generated), main (including all sections), button (to scroll to the top) and a footer.
+* `styles.css`: style file that contains all relevant styling for the document, e.g. the navigation bar styling
+* `app.js`: contains all the functionality of the landing page, e.g. when clicking on a section in the nav bar, scrolling to the correct section
