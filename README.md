@@ -8,6 +8,8 @@ The project displays a Landing Page which Navigation bar is dynamically generate
 By selecting one navigation item, it is scrolled to the selected section of the page.
 At the bottom of the page you will find a "scroll to top" button.
 
+The basic project was forked from the udacity/fend Github repository and then customized.
+
 ## Files
 * `index.html`: basic html file including header (without the navigation bar, because it gets dynamically generated), main (including all sections), button (to scroll to the top) and a footer.
 * `styles.css`: style file that contains all relevant styling for the document, e.g. the navigation bar styling
