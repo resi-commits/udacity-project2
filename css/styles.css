@@ -90,8 +90,6 @@ section {
 }
 
 .menu__link:hover {
-    background: rgb(100, 99, 99);
-    color: #fff;
     transition: ease 0.3s all;
     padding: 3px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);

@@ -63,7 +63,7 @@ const navBar = (items) => {
     // create single list element
     const navListItem = document.createElement('li');
     // set name of item and using href to link the correct item 
-    navListItem.innerHTML= `<a class='menu__link ${item.id}' href=#${item.id}>${item.dataset.nav}</a>`
+    navListItem.innerHTML= `<a class='menu__link ${item.id}'>${item.dataset.nav}</a>`
     // add elements to the fragment
     navListFragment.appendChild(navListItem);
     console.log(`successful for ${navListItem}`)
@@ -79,11 +79,9 @@ const scrollToSection = (event) => {
   // see documentation: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
   // without preventDefault() the click handling will not be executed
   event.preventDefault();
-  // get href and set offsetTop
-  const sectionHref = event.target.getAttribute("href");
-  const sectionOffset = document.querySelector(sectionHref).offsetTop;
+  const sec = event.target.classList[1]
   scrollTo({
-    top: sectionOffset,
+    top: document.querySelector(`#${sec}`).offsetTop,
     behavior: "smooth"
   });
 }
